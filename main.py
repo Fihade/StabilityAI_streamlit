@@ -83,12 +83,16 @@ if st.button('Say hello'):
 	# Set up our warning to print to the console if the adult content classifier is tripped.
 	# If adult content classifier is not tripped, save generated images.
 	for resp in answers:
+		print("1")
 		for artifact in resp.artifacts:
+			print("2")
 			if artifact.finish_reason == generation.FILTER:
 				warnings.warn(
 					"Your request activated the API's safety filters and could not be processed."
 					"Please modify the prompt and try again.")
+				print("3")
 				if artifact.type == generation.ARTIFACT_IMAGE:
+					print("4")
 					img = Image.open(io.BytesIO(artifact.binary))
 					st.image(img)
 	

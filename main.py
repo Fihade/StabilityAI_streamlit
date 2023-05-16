@@ -7,7 +7,7 @@ from PIL import Image
 from stability_sdk import client
 import stability_sdk.interfaces.gooseai.generation.generation_pb2 as generation
 
-STABILITY_HOST = 'grpc.stability.ai:443'
+STABILITY_HOST = "grpc.stability.ai:443"
 STABILITY_KEY = st.text_input("STABILITY_KEY")
 
 option = st.selectbox(

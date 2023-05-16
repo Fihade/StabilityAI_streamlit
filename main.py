@@ -59,7 +59,7 @@ if st.button('Say hello'):
 					"Please modify the prompt and try again.")
 			if artifact.type == generation.ARTIFACT_IMAGE:
 				img = Image.open(io.BytesIO(artifact.binary))
-				display(img)
+#				display(img)
 				st.image(img)
 	
 

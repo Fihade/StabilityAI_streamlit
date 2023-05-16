@@ -25,12 +25,6 @@ option = st.selectbox(
 )
 
 if st.button('Say hello'):
-	txt2Img()
-	
-
-
-
-def txt2Img():
 	stability_api = client.StabilityInference(
 		host=STABILITY_HOST,
 		key=STABILITY_KEY, # API Key reference.
@@ -66,3 +60,7 @@ def txt2Img():
 			if artifact.type == generation.ARTIFACT_IMAGE:
 				img = Image.open(io.BytesIO(artifact.binary))
 				display(img)
+				st.image(img)
+	
+
+

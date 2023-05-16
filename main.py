@@ -24,9 +24,12 @@ option = st.selectbox(
 	)
 )
 
-stability_api = client.StabilityInference(
-	host=STABILITY_HOST,
-	key=STABILITY_KEY, # API Key reference.
-	verbose=True, # Print debug messages.
-	engine="stable-diffusion-xl-beta-v2-2-2", # Set the engine to use for generation.
-)
+if st.button('Say hello'): 
+	stability_api = client.StabilityInference(
+		host=STABILITY_HOST,
+		key=STABILITY_KEY, # API Key reference.
+		verbose=True, # Print debug messages.
+		engine="stable-diffusion-xl-beta-v2-2-2", # Set the engine to use for generation.
+	)
+
+	

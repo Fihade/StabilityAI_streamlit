@@ -7,8 +7,7 @@ from PIL import Image
 from stability_sdk import client
 import stability_sdk.interfaces.gooseai.generation.generation_pb2 as generation
 
-os.environ['STABILITY_HOST'] = 'grpc.stability.ai:443'
-
+STABILITY_HOST = 'grpc.stability.ai:443'
 STABILITY_KEY = st.text_input("STABILITY_KEY")
 
 option = st.selectbox(
@@ -26,6 +25,7 @@ option = st.selectbox(
 )
 
 stability_api = client.StabilityInference(
+	host=STABILITY_HOST,
 	key=STABILITY_KEY, # API Key reference.
 	verbose=True, # Print debug messages.
 	engine="stable-diffusion-xl-beta-v2-2-2", # Set the engine to use for generation.

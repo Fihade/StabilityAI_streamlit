@@ -28,25 +28,25 @@ option = st.selectbox(
 	)
 )
 
-st.header("Description")
-prompt = st.text_input("Prompt")
-negative_prompt = st.text_input("Negative Prompt")
-
-
-st.header("Advanced Setting")
-col1, col2 = st.columns(2)
-
-with col1:
-	sampler = st.selectbox("Sampler", 	(
-		'ddim', 'plms', 'k_euler', 'k_euler_ancestral', 'k_heun', 'k_dpm_2', 'k_dpm_2_ancestral', 'k_dpmpp_2s_ancestral', 'k_lms', 'k_dpmpp_2m'
-	))
-	scale = st.number_input("CFG Scale", value=7, min_value=0)
-	seed = st.number_input("seed", value=-1, min_value=-1)
-	count = st.number_input("image count", value=1, min_value=1)
-with col2:
-	steps = st.number_input("steps", value=30, min_value=1)
-	width = st.number_input("width", value=512)
-	height = st.number_input("height", value=512)
+#st.header("Description")
+#prompt = st.text_input("Prompt")
+#negative_prompt = st.text_input("Negative Prompt")
+#
+#
+#st.header("Advanced Setting")
+#col1, col2 = st.columns(2)
+#
+#with col1:
+#	sampler = st.selectbox("Sampler", 	(
+#		'ddim', 'plms', 'k_euler', 'k_euler_ancestral', 'k_heun', 'k_dpm_2', 'k_dpm_2_ancestral', 'k_dpmpp_2s_ancestral', 'k_lms', 'k_dpmpp_2m'
+#	))
+#	scale = st.number_input("CFG Scale", value=7, min_value=0)
+#	seed = st.number_input("seed", value=-1, min_value=-1)
+#	count = st.number_input("image count", value=1, min_value=1)
+#with col2:
+#	steps = st.number_input("steps", value=30, min_value=1)
+#	width = st.number_input("width", value=512)
+#	height = st.number_input("height", value=512)
 
 if st.button('Say hello'):
 	print(

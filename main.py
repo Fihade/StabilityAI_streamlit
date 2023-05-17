@@ -49,13 +49,13 @@ option = st.selectbox(
 #	height = st.number_input("height", value=512)
 
 if st.button('Say hello'):
-	print(
-		f"""
-		host: {STABILITY_HOST}\n key: {STABILITY_KEY}\n prompt: {prompt}\n negative: {negative_prompt}\n sampler: {sampler}\n seed: {seed}\n scale={scale}\n  count: {count}\n  steps: {steps}\n width: {width}\n height: {height}\n
-		""")
-	st.write(f"""
-		host: {STABILITY_HOST}\n key: {STABILITY_KEY}\n prompt: {prompt}\n negative: {negative_prompt}\n sampler: {sampler}\n seed: {seed}\n scale={scale}\n  count: {count}\n  steps: {steps}\n width: {width}\n height: {height}\n
-		""")
+#	print(
+#		f"""
+#		host: {STABILITY_HOST}\n key: {STABILITY_KEY}\n prompt: {prompt}\n negative: {negative_prompt}\n sampler: {sampler}\n seed: {seed}\n scale={scale}\n  count: {count}\n  steps: {steps}\n width: {width}\n height: {height}\n
+#		""")
+#	st.write(f"""
+#		host: {STABILITY_HOST}\n key: {STABILITY_KEY}\n prompt: {prompt}\n negative: {negative_prompt}\n sampler: {sampler}\n seed: {seed}\n scale={scale}\n  count: {count}\n  steps: {steps}\n width: {width}\n height: {height}\n
+#		""")
 	stability_api = client.StabilityInference(
 		host=STABILITY_HOST,
 		key=STABILITY_KEY, # API Key reference.
